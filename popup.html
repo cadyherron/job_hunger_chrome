@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Hunger</title>
+  <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="ajax.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <button id="sessionTest">Click to see localStorage</button>
+
+  <div id="showSignIn">
+    <h3>Sign In</h3>
+    <form method="post">
+      <p><input type="text" name="login" value="" placeholder="Enter Your Email" id="email"></p>
+      <p><input type="password" name="password" value="" placeholder="Password" id="password"></p>
+      <p class="remember_me">
+        <label>
+          <input type="checkbox" name="remember_me" id="remember_me">
+          Remember me on this computer
+        </label>
+      </p>
+      <p class="submit"><input type="submit" name="commit" value="Login" id="login"></p>
+    </form>
+  </div>
+
+
+<hr>
+
+
+  <h3>Save this job to Job Hunger!</h3>
+  <form id="jobForm">
+    Title:<br>
+    <input type="text" name="title" id="title" class="wide"><br><br>
+    Company:<br>
+    <input type="text" name="company" id="company" class="wide"><br><br>
+    Url:<br>
+    <input type="text" name="url" id="url" class="wide"><br><br>
+
+    <input type="submit" value="Create Job" id="createJob" class="wide">
+  </form>
+
+</body>
+</html>
+

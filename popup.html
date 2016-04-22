@@ -3,45 +3,51 @@
 <head>
   <title>Job Hunger</title>
   <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script type="text/javascript" src="ajax.js"></script>
   <script type="text/javascript" src="popup.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="container">
 
-  <button id="sessionTest">Click to see localStorage</button>
+  <!-- <button id="sessionTest">Click to see localStorage</button> -->
 
   <div id="showSignIn">
-    <h3>Sign In</h3>
-    <form method="post">
-      <p><input type="text" name="login" value="" placeholder="Enter Your Email" id="email"></p>
-      <p><input type="password" name="password" value="" placeholder="Password" id="password"></p>
+    <h3>Job Hunger</h3>
+    <form method="post" class="form-group">
+      <p><input type="text" name="login" value="" placeholder="Enter Your Email" id="email" class="form-control"></p>
+      <p><input type="password" name="password" value="" placeholder="Password" id="password" class="form-control"></p>
       <p class="remember_me">
         <label>
           <input type="checkbox" name="remember_me" id="remember_me">
           Remember me on this computer
         </label>
       </p>
-      <p class="submit"><input type="submit" name="commit" value="Login" id="login"></p>
+      <p class="submit"><input type="submit" name="commit" value="Login" id="login" class="btn btn-block btn-success"></p>
     </form>
   </div>
 
-
-<hr>
-
-
-  <h3>Save this job to Job Hunger!</h3>
-  <form id="jobForm">
-    Title:<br>
-    <input type="text" name="title" id="title" class="wide"><br><br>
-    Company:<br>
-    <input type="text" name="company" id="company" class="wide"><br><br>
-    Url:<br>
-    <input type="text" name="url" id="url" class="wide"><br><br>
-
-    <input type="submit" value="Create Job" id="createJob" class="wide">
-  </form>
+  <div id="jobForm"hidden=true>
+    <div class="row">
+      <div class='col-xs-9'>
+        <h3>Save this job to Job Hunger!</h3>
+      </div>
+      <div class='col-xs-3 button-container'>
+        <button id="logout" class="logout-btn btn btn-danger">Log Out</button>
+      </div>
+    </div>
+    <form class="form-group">
+      <label for="title" class="label label-info">Title</label><br>
+      <input type="text" name="title" id="title" class="form-control">
+      <label for="company" class="label label-info">Company</label><br>
+      <input type="text" name="company" id="company" class="form-control">
+      <label for="notes" class="label label-info">Notes</label><br>
+      <textarea type="text" name="notes" id="notes" class="form-control" rows="5"></textarea>
+      <label for="url" class="label label-info">Url</label><br>
+      <input type="text" name="url" id="url" class="form-control"><br>
+      <input type="submit" value="Create Job" id="createJob" class="btn btn-block btn-primary">
+    </form>
+  </div>
 
 </body>
 </html>
-

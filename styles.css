@@ -5,3 +5,16 @@ body {
 .wide {
   width: 450px;
 }
+
+.button-container {
+  position: relative;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 15px;
+}
+
+textarea {
+  resize: vertical;
+}

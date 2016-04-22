@@ -3,49 +3,55 @@
 <head>
   <title>Job Hunger</title>
   <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-  <script type="text/javascript" src="js/ajax.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body class="container">
 
-  <!-- <button id="sessionTest">Click to see localStorage</button> -->
-
   <div id="showSignIn">
-    <h3>Job Hunger</h3>
+    <h3>Sign In to Job Hunger:</h3>
+    <div class="error">Invalid login credentials. Please try again.</div>
     <form method="post" class="form-group">
-      <p><input type="text" name="login" value="" placeholder="Enter Your Email" id="email" class="form-control"></p>
-      <p><input type="password" name="password" value="" placeholder="Password" id="password" class="form-control"></p>
-      <p class="remember_me">
-        <label>
-          <input type="checkbox" name="remember_me" id="remember_me">
-          Remember me on this computer
-        </label>
-      </p>
-      <p class="submit"><input type="submit" name="commit" value="Login" id="login" class="btn btn-block btn-success"></p>
+      <p><input type="text" name="login" value="" placeholder="Email" id="email" class="wide-input"></p>
+      <div class="border"></div>
+      <p><input type="password" name="password" value="" placeholder="Password" id="password" class="wide-input"></p>
+      <div class="border"></div><br>
+      <p class="submit"><input type="submit" name="commit" value="Log In" id="login" class="special-button"></p>
     </form>
   </div>
 
-  <div id="jobForm"hidden=true>
+  <div id="jobForm" class="invisible">
     <div class="row">
       <div class='col-xs-9'>
-        <h3>Save this job to Job Hunger!</h3>
+        <h3>Save this job to Job Hunger:</h3>
       </div>
       <div class='col-xs-3 button-container'>
-        <button id="logout" class="logout-btn btn btn-danger">Log Out</button>
+        <button id="logout" class="special-button">Log Out</button>
       </div>
     </div>
+
+    <div class="success">Success - job was added to your Job Hunger dashboard!</div>
+    <div class="failure">Unable to create job. Please try again.</div>
+
     <form class="form-group">
-      <label for="title" class="label label-info">Title</label><br>
-      <input type="text" name="title" id="title" class="form-control">
-      <label for="company" class="label label-info">Company</label><br>
-      <input type="text" name="company" id="company" class="form-control">
-      <label for="notes" class="label label-info">Notes</label><br>
-      <textarea type="text" name="notes" id="notes" class="form-control" rows="5"></textarea>
-      <label for="url" class="label label-info">Url</label><br>
-      <input type="text" name="url" id="url" class="form-control"><br>
-      <input type="submit" value="Create Job" id="createJob" class="btn btn-block btn-primary">
+      <label for="title" class="label label-default">Title</label><br>
+      <input type="text" name="title" id="title" class="wide-input" placeholder="Title">
+      <div class="border"></div>
+
+      <label for="company" class="label label-default">Company</label><br>
+      <input type="text" name="company" id="company" class="wide-input" placeholder="Company">
+      <div class="border"></div>
+
+      <label for="notes" class="label label-default">Notes</label><br>
+      <textarea type="text" name="notes" id="notes" class="wide-input" rows="5" placeholder="Notes"></textarea>
+      <div class="border"></div>
+
+      <label for="url" class="label label-default">Url</label><br>
+      <input type="text" name="url" id="url" class="wide-input"><br>
+      <div class="border"></div><br>
+
+      <input type="submit" value="Create Job" id="createJob" class="special-button">
     </form>
   </div>
 

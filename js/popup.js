@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+  chrome.runtime.sendMessage({method:'getTitle'}, function(response){
+    // alert("inside popup.js")
+    console.log(response)
+    $('#title').val(response[0]);
+    $('#company').val(response[1])
+  });
+
 
   // fill in the url with current url
   chrome.tabs.query({active: true, lastFocusedWindow: true}, function (tabs) {

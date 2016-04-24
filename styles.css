@@ -65,5 +65,10 @@ textarea {
 .error, .success, .failure {
   display: none;
   font-size: 20px;
-  color: #f88;
+  color: #F88;
+}
+
+.link {
+  font-size: 20px;
+  color: #F88;
 }

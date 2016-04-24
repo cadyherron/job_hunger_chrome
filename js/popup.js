@@ -1,8 +1,9 @@
+// this file controls the popup:
+
 $(document).ready(function () {
 
+  // fill in title and company from the DOM
   chrome.runtime.sendMessage({method:'getTitle'}, function(response){
-    // alert("inside popup.js")
-    console.log(response)
     $('#title').val(response[0]);
     $('#company').val(response[1])
   });
@@ -32,9 +33,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "POST",
-      url: "http://localhost:3000/auth/sign_in?password=" + password + "&email=" + email,
-      // url: "http://localhost:3000/auth/sign_in?password=password&email=test@test.com",
-      // url: "http://mysterious-shelf-41013.herokuapp.com/auth/sign_in?password=" + password + "&email=" + email,
+      url: "http://mysterious-shelf-41013.herokuapp.com/auth/sign_in?password=" + password + "&email=" + email,
       dataType: "json",
       success: function(data, status, xhr) {
         localStorage.setItem('accessToken', xhr.getResponseHeader('access-token'));
@@ -60,7 +59,6 @@ $(document).ready(function () {
 
 
 
-
   // submit the job form
   $('#createJob').click(function(event) {
     event.preventDefault();
@@ -68,8 +66,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "POST",
-      url: "http://localhost:3000/create_from_chrome.json",
-      // url: "http://mysterious-shelf-41013.herokuapp.com/create_from_chrome.json",
+      url: "http://mysterious-shelf-41013.herokuapp.com/create_from_chrome.json",
       dataType: "json",
       data: JSON.stringify(data),
       beforeSend: function(xhr) {

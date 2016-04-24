@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Job Hunger",
-  "version": "0.1",
+  "version": "0.0.1",
   "browser_action": {
     "default_icon": "images/19logo.png",
     "default_popup": "popup.html"

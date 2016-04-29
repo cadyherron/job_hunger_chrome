@@ -62,7 +62,7 @@ $(document).ready(function () {
   // submit the job form
   $('#createJob').click(function(event) {
     event.preventDefault();
-    data = {title: $('#title').val(), company_name: $('#company').val(), notes: $('#notes').val()};
+    data = {title: $('#title').val(), company_name: $('#company').val(), url: $('#url').val()};
 
     $.ajax({
       method: "POST",
